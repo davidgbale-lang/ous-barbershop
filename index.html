@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUS Barber Shop · Barbier à Clichy, 12 rue du Landy</title>
+<meta name="description" content="OUS Barber Shop, barbier à Clichy : dégradés, waves, coupes afro, barbe et coloration, homme et femme. 12 rue du Landy, 92110 Clichy. 06 24 23 00 49.">
+<meta property="og:title" content="OUS Barber Shop · Clichy">
+<meta property="og:description" content="Dégradés, waves, coupes afro, barbe et coloration. 12 rue du Landy, Clichy.">
+<meta property="og:image" content="images/salon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Rye&display=swap">
+<style>
+:root{--blue:#1D3BC4;--red:#D7262E;--ink:#0E0E10;--paper:#F6F4EF;--card:#1A1A1E;--muted:#B8B8C0;--accent:#9FB0FF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#fff}a:hover{color:#DCE3FF}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.display{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;margin:0;line-height:.95}
+.h2{font-size:clamp(48px,7vw,76px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 26px;border-radius:6px;font-weight:700;font-size:17px;text-decoration:none}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{color:#fff;filter:brightness(1.08)}
+.btn-white{background:#fff;color:var(--blue)}.btn-white:hover{color:var(--blue)}
+.btn-ghost{border:2px solid var(--paper);color:var(--paper)}
+.checker{height:40px;background:repeating-conic-gradient(var(--ink) 0 25%,var(--paper) 0 50%) 0 0/40px 40px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--accent)}
+
+header{background:var(--blue);position:sticky;top:0;z-index:10}
+header .wrap{padding-top:14px;padding-bottom:14px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.logo b{font-family:Rye,Georgia,serif;font-weight:400;font-size:28px;color:#fff}
+.logo span{font-size:11px;font-weight:700;letter-spacing:.32em;color:#DCE3FF}
+nav{display:flex;flex-wrap:wrap;gap:22px;align-items:center;font-size:15px;font-weight:600}
+nav a{text-decoration:none}
+@media (max-width:720px){nav .nl{display:none}}
+
+.hero{background:var(--blue);overflow:hidden}
+.hero .wrap{padding-top:40px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end}
+.hero-txt{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px;padding-bottom:56px}
+.badge{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:rgba(0,0,0,.25);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:999px;background:#49E07B}
+.hero h1{font-size:clamp(68px,10vw,156px);line-height:.86;color:#fff}
+.hero h1 em{font-style:normal;background:var(--red);padding:0 14px;white-space:nowrap}
+.hero p{margin:0;font-size:20px;line-height:1.5;color:#E8ECFF;max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-img{flex:1 1 380px;position:relative;display:flex;justify-content:flex-end}
+.hero-img img{width:100%;max-width:480px;height:560px;object-fit:cover;border-radius:12px 12px 0 0}
+.rating{position:absolute;left:0;bottom:40px;background:#fff;color:var(--ink);border-radius:10px;padding:16px 20px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.rating b{display:block;font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;font-size:44px;line-height:1;color:var(--blue)}
+.rating span{font-size:13px;font-weight:600}
+@media (max-width:720px){.hero-img img{height:380px}}
+
+section.pad{padding-top:96px;padding-bottom:96px}
+.row{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-end}
+.stack{display:flex;flex-direction:column;gap:32px}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px}
+.filters button{min-height:44px;padding:10px 20px;border-radius:999px;cursor:pointer;font:700 15px Inter,sans-serif;background:transparent;color:var(--paper);border:2px solid #3A3A44}
+.filters button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.grid figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:var(--card)}
+.grid figure[hidden]{display:none}
+.grid img{width:100%;height:340px;object-fit:cover}
+.grid figcaption{position:absolute;left:12px;bottom:12px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px}
+.count{font-size:15px;color:var(--muted)}.count a{color:var(--accent)}
+
+.tarifs{background:var(--paper);color:var(--ink)}
+.tarifs .wrap{display:flex;flex-wrap:wrap;gap:56px}
+.tarifs .side{flex:1 1 340px;display:flex;flex-direction:column;gap:18px}
+.tarifs .side p{margin:0;font-size:17px;line-height:1.55;color:#3A3A40}
+.tarifs .side img{width:100%;height:260px;object-fit:cover;border-radius:12px;margin-top:8px}
+.list{flex:999 1 520px;min-width:0}
+.item{display:flex;justify-content:space-between;gap:16px;padding:22px 0;border-bottom:2px solid var(--ink);font-size:20px}
+.item:last-child{border-bottom:0}
+.item small{display:block;font-size:15px;color:#55555C;font-weight:400}
+.price{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;font-size:36px;white-space:nowrap}
+
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.member{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.portrait{height:300px;background:repeating-linear-gradient(135deg,#22222A 0 16px,#26262E 16px 32px);display:flex;align-items:flex-end;padding:16px;color:#8E8E98;font-size:13px}
+.member .body{padding:22px;display:flex;flex-direction:column;gap:8px}
+.member .name{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:22px;font-weight:700}
+.tag{font-size:13px;font-weight:700;color:#fff;background:var(--blue);padding:4px 10px;border-radius:999px}
+.member q{color:var(--muted);font-size:15px;quotes:"« " " »"}
+.member a{margin-top:8px;font-weight:700;color:var(--accent)}
+
+.avis{background:var(--blue)}
+.avis .big{font-size:clamp(56px,10vw,132px);line-height:.9;color:#fff}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.quotes figure{margin:0;background:rgba(0,0,0,.22);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:16px}
+.quotes blockquote{margin:0;font-size:19px;line-height:1.45;color:#fff}
+.quotes figcaption{font-size:14px;color:#DCE3FF}
+
+.book .wrap{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.book .txt{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.book h2{font-size:clamp(52px,8vw,84px);line-height:.92}
+.book p{margin:0;font-size:18px;line-height:1.55;color:var(--muted);max-width:520px}
+.book img{flex:1 1 380px;min-width:0;height:360px;object-fit:cover;border-radius:14px}
+
+footer{background:var(--card)}
+.infos{padding-top:72px;padding-bottom:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.infos div{display:flex;flex-direction:column;gap:10px;font-size:18px;line-height:1.55}
+.map{border:0;width:100%;height:320px;border-radius:14px;filter:grayscale(.3)}
+.copy{padding-top:24px;padding-bottom:32px;font-size:13px;color:#8E8E98}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<a class="logo" href="#top" aria-label="OUS Barber Shop, accueil"><b>OUS BARBER</b><span>SHOP · CLICHY</span></a>
+<nav aria-label="Navigation principale">
+<a class="nl" href="#lookbook">Lookbook</a>
+<a class="nl" href="#tarifs">Tarifs</a>
+<a class="nl" href="#equipe">L'équipe</a>
+<a class="nl" href="#infos">Accès</a>
+<a class="btn btn-red" href="#reserver">Réserver</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap">
+<div class="hero-txt">
+<div class="badge"><span class="dot"></span><span id="statut">Mardi au samedi 10 h – 20 h · dimanche 11 h – 19 h</span></div>
+<h1 class="display">Le barber<br>de Clichy<br>depuis <em>10 ans+</em></h1>
+<p>Dégradés, waves, coupes afro, barbe et coloration. Homme et femme. Au 12 rue du Landy.</p>
+<div class="ctas">
+<a class="btn btn-red" href="#reserver">Réserver mon créneau</a>
+<a class="btn btn-white" href="tel:+33624230049">06 24 23 00 49</a>
+</div>
+</div>
+<div class="hero-img">
+<img src="images/salon.jpg" alt="Intérieur du salon OUS Barber Shop : fauteuils, damier noir et blanc, mur de briques" fetchpriority="high">
+<div class="rating"><b>4,2/5</b><span>107 avis Google</span></div>
+</div>
+</div>
+</section>
+<div class="checker" aria-hidden="true"></div>
+
+<section id="lookbook" class="wrap pad stack">
+<div class="row">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div class="kicker">LOOKBOOK</div>
+<h2 class="display h2">Choisis ta coupe,<br>montre-la au barber.</h2>
+</div>
+<div class="filters" role="group" aria-label="Filtrer les coupes">
+<button type="button" data-f="Tout" aria-pressed="true">Tout</button>
+<button type="button" data-f="Dégradé" aria-pressed="false">Dégradé</button>
+<button type="button" data-f="Waves" aria-pressed="false">Waves</button>
+<button type="button" data-f="Bouclés" aria-pressed="false">Bouclés</button>
+<button type="button" data-f="Traits" aria-pressed="false">Traits</button>
+</div>
+</div>
+<div class="grid" id="shots">
+<figure data-tag="Dégradé"><img loading="lazy" src="images/coupe-degrade-1.jpg" alt="Dégradé haut avec coiffé en arrière"><figcaption>Dégradé</figcaption></figure>
+<figure data-tag="Waves"><img loading="lazy" src="images/coupe-waves-1.jpg" alt="Waves 360 avec contour net"><figcaption>Waves</figcaption></figure>
+<figure data-tag="Bouclés"><img loading="lazy" src="images/coupe-boucles-1.jpg" alt="Cheveux bouclés avec taper et trait"><figcaption>Bouclés</figcaption></figure>
+<figure data-tag="Traits"><img loading="lazy" src="images/coupe-traits-1.jpg" alt="Dégradé court avec deux traits"><figcaption>Traits</figcaption></figure>
+<figure data-tag="Waves"><img loading="lazy" src="images/coupe-waves-2.jpg" alt="Waves avec raie tracée"><figcaption>Waves</figcaption></figure>
+<figure data-tag="Bouclés"><img loading="lazy" src="images/coupe-boucles-2.jpg" alt="Dégradé bas avec dessus bouclé"><figcaption>Bouclés</figcaption></figure>
+<figure data-tag="Traits"><img loading="lazy" src="images/coupe-traits-2.jpg" alt="Dégradé avec traits et barbe taillée"><figcaption>Traits</figcaption></figure>
+<figure data-tag="Waves"><img loading="lazy" src="images/coupe-waves-3.jpg" alt="Waves vues de dessus"><figcaption>Waves</figcaption></figure>
+<figure data-tag="Dégradé"><img loading="lazy" src="images/coupe-degrade-2.jpg" alt="Dégradé court avec trait, barbier en arrière-plan"><figcaption>Dégradé</figcaption></figure>
+</div>
+<div class="count"><span id="count">9 coupes réalisées au salon</span> · <a href="https://www.instagram.com/ousbarbershop/">toutes les coupes sur Instagram</a></div>
+</section>
+
+<section id="tarifs" class="tarifs pad">
+<div class="wrap">
+<div class="side">
+<h2 class="display h2">Les prix,<br><span style="color:var(--red)">affichés.</span></h2>
+<p>Plus besoin de demander en commentaire. Les tarifs sont les mêmes pour tout le monde.</p>
+<img loading="lazy" src="images/fauteuils.jpg" alt="Trois fauteuils de barbier avec capes rouges au logo OUS">
+</div>
+<div class="list">
+<div class="item"><span><strong>Coupe homme</strong><small>Dégradé, ciseaux, tondeuse</small></span><span class="price">20 €</span></div>
+<div class="item"><span><strong>Coupe + barbe</strong><small>Contours, taille aux ciseaux</small></span><span class="price">[PRIX] €</span></div>
+<div class="item"><span><strong>Barbe seule</strong></span><span class="price">[PRIX] €</span></div>
+<div class="item"><span><strong>Coiffure femme · tresses, nattes</strong></span><span class="price">[PRIX] €</span></div>
+<div class="item"><span><strong>Coloration / décoloration</strong><small>Sur diagnostic en salon</small></span><span class="price">Dès [PRIX] €</span></div>
+<div class="item"><span><strong>Supplément rendez-vous</strong><small>Passage prioritaire, sans attente</small></span><span class="price">+[X] €</span></div>
+</div>
+</div>
+</section>
+
+<section id="equipe" class="wrap pad stack">
+<div class="row">
+<h2 class="display h2">Choisis ton barber</h2>
+<p style="margin:0;max-width:420px;color:var(--muted);font-size:17px;line-height:1.55">Chaque barber a son style. Réserve directement avec celui qui te connaît.</p>
+</div>
+<div class="team">
+<div class="member">
+<div class="portrait">[PORTRAIT d'Ousmane devant la fresque]</div>
+<div class="body">
+<div class="name">Ousmane <span class="tag">Gérant</span></div>
+<div><q>C'est un peintre, pas seulement un barbier.</q> <span style="color:var(--muted);font-size:15px">· Hamed, avis Google</span></div>
+<a href="#reserver">Réserver avec Ousmane →</a>
+</div>
+</div>
+<div class="member">
+<div class="portrait">[PORTRAIT de Youssouf]</div>
+<div class="body">
+<div class="name">Youssouf</div>
+<div><q>Équipe professionnelle et hyper sympa, en particulier Youssouf.</q> <span style="color:var(--muted);font-size:15px">· Hamid, avis Google</span></div>
+<a href="#reserver">Réserver avec Youssouf →</a>
+</div>
+</div>
+<div class="member">
+<div class="portrait">[PORTRAIT de Dominique]</div>
+<div class="body">
+<div class="name">Dominique</div>
+<div><q>Super coiffeur, très sociable et professionnel.</q> <span style="color:var(--muted);font-size:15px">· Léo, avis Google</span></div>
+<a href="#reserver">Réserver avec Dominique →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="avis pad">
+<div class="wrap stack" style="gap:40px">
+<div class="display big">« Meilleur barber de tout Clichy »</div>
+<div class="quotes">
+<figure><blockquote>« Toujours un plaisir de couper chez Ous, depuis plus de 10 ans. Au top. »</blockquote><figcaption>Sofiane · Avis Google</figcaption></figure>
+<figure><blockquote>« Décoration street magnifique, propose un fauteuil massant pendant l'attente. »</blockquote><figcaption>Noordine · Avis Google</figcaption></figure>
+<figure><blockquote>« Super coupe ciseaux et tondeuse sur cheveux bouclés, coiffeur agréable et qui écoute. »</blockquote><figcaption>Remi · Avis Google</figcaption></figure>
+</div>
+</div>
+</section>
+<div class="checker" aria-hidden="true"></div>
+
+<section id="reserver" class="book pad">
+<div class="wrap">
+<div class="txt">
+<h2 class="display">Réserve,<br>passe <span style="color:var(--red)">sans attendre.</span></h2>
+<p>Appelle ou écris sur WhatsApp pour bloquer ton créneau. Si le salon est complet, tu le sais avant de te déplacer.</p>
+<div class="ctas">
+<!-- À remplacer par le lien de réservation en ligne (Planity) quand le compte sera créé -->
+<a class="btn btn-red" href="tel:+33624230049">Appeler pour réserver</a>
+<a class="btn btn-ghost" href="https://wa.me/33624230049">WhatsApp</a>
+</div>
+</div>
+<img loading="lazy" src="images/devanture.jpg" alt="Devanture bleue d'OUS Barber Shop, 12 rue du Landy à Clichy">
+</div>
+</section>
+</main>
+
+<footer id="infos">
+<div class="wrap infos">
+<div><span class="kicker">ADRESSE</span>12 rue du Landy<br>92110 Clichy<br><a href="https://www.google.com/maps/search/?api=1&query=OUS+BARBER+SHOP+12+Rue+du+Landy+92110+Clichy" style="color:var(--accent);font-size:16px">Itinéraire →</a></div>
+<div><span class="kicker">HORAIRES</span>Mardi au samedi · 10 h – 20 h<br>Dimanche · 11 h – 19 h<br>Lundi · fermé</div>
+<div><span class="kicker">CONTACT</span><a href="tel:+33624230049">06 24 23 00 49</a><a href="https://www.instagram.com/ousbarbershop/">Instagram @ousbarbershop</a></div>
+</div>
+<div class="wrap"><iframe class="map" title="Plan d'accès OUS Barber Shop" loading="lazy" src="https://www.google.com/maps?q=12+Rue+du+Landy,+92110+Clichy&output=embed"></iframe></div>
+<div class="wrap copy">© OUS Barber Shop · Clichy</div>
+</footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button');
+  var shots=document.querySelectorAll('#shots figure');
+  var count=document.getElementById('count');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-f'),n=0;
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      shots.forEach(function(s){var show=f==='Tout'||s.getAttribute('data-tag')===f;s.hidden=!show;if(show)n++;});
+      count.textContent=n+(n>1?' coupes réalisées au salon':' coupe réalisée au salon');
+    });
+  });
+  // Statut ouvert / fermé selon l'heure de Paris
+  var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Paris'}));
+  var j=d.getDay(),h=d.getHours()+d.getMinutes()/60;
+  var open=(j>=2&&j<=6&&h>=10&&h<20)||(j===0&&h>=11&&h<19);
+  var st=document.getElementById('statut');
+  if(open){st.textContent='Ouvert maintenant · jusqu’à '+(j===0?'19 h':'20 h');}
+  else{st.textContent='Fermé pour le moment · mardi au samedi 10 h – 20 h';st.previousElementSibling.style.background='#E8B23A';}
+})();
+</script>
+</body>
+</html>
